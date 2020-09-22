@@ -9,7 +9,7 @@
 
 ## 翻译进度
 
-9.11 [在 Go 程序中使用外部库](eBook/09.11.md)
+19.10 [总结和增强](eBook/19.10.md)
 
 ## 支持本书
 
@@ -18,6 +18,10 @@
 ## 交流社区
 
 参见 [Go 语言学习资料与社区索引](https://github.com/Unknwon/go-study-index)。
+
+关注 Go 语言中文网公众号学习 Go
+
+![](studygolang-qrcode.jpg)
 
 ### 新人守则
 
@@ -34,6 +38,11 @@
 	- [@chidouhu](https://github.com/chidouhu)
 	- [@spawnris](https://github.com/spawnris)
 	- [@domainname](https://github.com/domainname)
+	- [@leisore](https://github.com/leisore)
+	- [@dake](https://github.com/dake)
+	- [@glight2000](https://github.com/glight2000)
+	- [@songleo](https://github.com/songleo)
+	- [@marjune163](https://github.com/marjune163)
 
 ## 授权许可
 
@@ -41,6 +50,8 @@
 
 ## 开始阅读
 
-[前言](./eBook/preface.md)
+- 您可以选择以下方式阅读本书：
+  - [GitHub在线](./eBook/preface.md)
 
 想读书的人，不会找不到 [目录](eBook/directory.md) :)
+

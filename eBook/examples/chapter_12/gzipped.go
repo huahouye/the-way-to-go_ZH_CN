@@ -2,10 +2,10 @@
 package main
 
 import (
-	"fmt"
 	"bufio"
-	"os"
 	"compress/gzip"
+	"fmt"
+	"os"
 )
 
 func main() {
@@ -17,6 +17,7 @@ func main() {
 			err)
 		os.Exit(1)
 	}
+	defer fi.Close()
 	fz, err := gzip.NewReader(fi)
 	if err != nil {
 		r = bufio.NewReader(fi)

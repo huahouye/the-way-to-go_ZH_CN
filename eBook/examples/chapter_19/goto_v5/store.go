@@ -5,8 +5,8 @@ import (
 	"errors"
 	"io"
 	"log"
-	"os"
 	"net/rpc"
+	"os"
 	"sync"
 )
 
@@ -18,14 +18,14 @@ type Store interface {
 }
 
 type ProxyStore struct {
-	urls   *URLStore  // local cache
+	urls   *URLStore // local cache
 	client *rpc.Client
 }
 
 type URLStore struct {
-	urls  map[string]string
-	mu    sync.RWMutex
-	save  chan record
+	urls map[string]string
+	mu   sync.RWMutex
+	save chan record
 }
 
 type record struct {
@@ -64,7 +64,7 @@ func (s *URLStore) Set(key, url *string) error {
 	return nil
 }
 
-func (s *URLStore) Count() int {
+func (s *URLStore) count() int {
 	s.mu.RLock()
 	defer s.mu.RUnlock()
 	return len(s.urls)
@@ -72,7 +72,7 @@ func (s *URLStore) Count() int {
 
 func (s *URLStore) Put(url, key *string) error {
 	for {
-		*key = genKey(s.Count())
+		*key = genKey(s.count())
 		if err := s.Set(key, url); err == nil {
 			break
 		}

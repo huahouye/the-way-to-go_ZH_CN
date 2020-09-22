@@ -1,11 +1,11 @@
 package main
 
 import (
-	"os"
-	"io"
-	"fmt"
 	"bufio"
 	"flag"
+	"fmt"
+	"io"
+	"os"
 )
 
 var numberFlag = flag.Bool("n", false, "number each line")
@@ -39,5 +39,6 @@ func main() {
 			continue
 		}
 		cat(bufio.NewReader(f))
+		f.Close()
 	}
 }
